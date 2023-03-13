@@ -2,8 +2,8 @@
 
 ArquivoTexto arquivo = new ArquivoTexto();
 
-arquivo.Conteudo = "Exemplo de conteúdo a ser salvo em arquivo.";
-arquivo.EnderecoNomeArquivo = @"C:\temp\arquivo.txt";
+arquivo.Conteudo = "Texto para a atividade 3 do Robin.";
+arquivo.EnderecoNomeArquivo = @"C:\temp\jureg.txt";
 
 if (arquivo.SalvarDadosArquivo())
 {
