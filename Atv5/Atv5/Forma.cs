@@ -8,17 +8,15 @@ namespace Atv5
 {
     public class Forma
     {
-        public double Area {  get; set; }
-        public int Perimetrro { get; set; }
+        public double Area;
+        public int Perimetro;
 
         public virtual void CalcularArea()
         {
-
         }
 
-        public virtual void CalcularPerimetro()
+        public virtual void CalcularPerimero()
         {
-
         }
     }
 }
