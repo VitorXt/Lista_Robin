@@ -9,39 +9,44 @@ namespace Atv4
     public class Aluno
     {
         public string RA;
-        public string nome;
-        public decimal notaprova;
-        public decimal notatrabalho;
-        public decimal notafinal;
+        public string Nome;
+        public decimal Notaprova;
+        public decimal Notatrabalho;
+        public decimal Notafinal;
 
         public void CalcularMedia()
         {
-            notafinal = notaprova + notatrabalho;
+            decimal media = (Notaprova + Notatrabalho) / 2;
+
+            Console.WriteLine(media);
         }
-        public bool CalcularNotaFinal(decimal notafinal)
+
+        public void CalcularNotaFinal()
         {
-            if (notafinal >= 14)
-            {
-                Console.WriteLine("Você foi aprovado");
-                return true;
-            }
-            else
-            {
-                Console.WriteLine($"Você está na prova final, precisa de: {14 - notafinal}");
-                return false;
-            }
+            Notafinal = Notaprova + Notatrabalho;
+        }
+
+        public void ReceberDados()
+        {
+            Console.WriteLine("Digite o seu RA:");
+            RA = Console.ReadLine();
+
+            Console.WriteLine("Digite o seu nome:");
+            Nome = Console.ReadLine();
+
+            Console.WriteLine("Digite o valor da prova:");
+            Notaprova = Convert.ToDecimal(Console.ReadLine());
+
+            Console.WriteLine("Digite o valor do trabalho:");
+            Notatrabalho = Convert.ToDecimal(Console.ReadLine());
+
         }
 
         public void ImprimirNotaFinal()
         {
-            Console.WriteLine($"Sua Nota final é : {notafinal}");
+            Console.WriteLine($"A sua nota final é de: {Notafinal}");
         }
-        public void ReceberDados()
-        {
-            Console.WriteLine($"RA: {RA}");
-            Console.WriteLine($"Nome: {nome}");
-            Console.WriteLine($"Nota da prova: {notaprova}");
-            Console.WriteLine($"Nota do trabalho: {notatrabalho}");
-        }
+
     }
+
 }
