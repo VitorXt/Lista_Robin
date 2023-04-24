@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Atv7
 {
-    public abstract class Empregado
+    abstract class Empregado
     {
-        public string Nome { get; set; }
-        public string Sobrenome { get; set; }
-        public string Cpf { get; set; }
-        public abstract double Vencimento();
+        protected string nome { get; set; }
+        protected string sobrenome { get; set; }
+        protected string CPF { get; set; }
+
+        public virtual double Vencimento(double variavel) { return variavel; }
     }
 }

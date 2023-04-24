@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Atv7
 {
-    public class Assalariado : Empregado
+    class Assalariado : Empregado
     {
-        public double Salario { get; set; }
-        public override double Vencimento()
+        public double Salario { get; private set; }
+        public override double Vencimento(double salario)
         {
+            Salario = salario;
             return Salario;
         }
     }

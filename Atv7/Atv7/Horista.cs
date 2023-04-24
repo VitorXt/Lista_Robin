@@ -6,13 +6,22 @@ using System.Threading.Tasks;
 
 namespace Atv7
 {
-    public class Horista : Empregado
+    class Horista : Empregado
     {
-        public double PrecoHora { get; set; }
-        public double HorasTrabalhadas { get; set; }
-        public override double Vencimento()
+        public double preco_horas { get; private set; }
+        public double Horas_trabalhadas { get; private set; }
+
+        public double salario_horas { get; private set; }
+
+        public override double Vencimento(double horas)
         {
-            return PrecoHora * HorasTrabalhadas;
+            preco_horas = horas;
+
+            Console.WriteLine("Quantas hora trabalhadas: ");
+            Horas_trabalhadas = double.Parse(Console.ReadLine());
+            salario_horas = preco_horas * Horas_trabalhadas;
+
+            return salario_horas;
         }
     }
 }
